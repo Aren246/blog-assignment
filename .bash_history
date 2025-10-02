@@ -1,3 +1,0 @@
-cva
-ls
-exit
