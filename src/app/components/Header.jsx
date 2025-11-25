@@ -1,18 +1,15 @@
 import Link from 'next/link';
+import NavBar from './NavBar';
 
 export default function Header() {
   return (
-    <header className="bg-red-600 text-white p-6 border-b-4 border-red-900">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Boxing Blog</h1>
-        <nav className="flex gap-6">
-          <Link href="/" className="hover:underline font-bold">
-            Home
-          </Link>
-          <Link href="/posts" className="hover:underline font-bold">
-            Boxers
-          </Link>
-        </nav>
+    <header className="bg-gradient-to-r from-red-600 to-red-800 text-white py-8 shadow-lg">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+         Boxing Blog
+        </h1>
+        
+        <NavBar />
       </div>
     </header>
   );
