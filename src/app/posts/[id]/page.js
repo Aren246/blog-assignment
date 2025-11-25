@@ -54,13 +54,29 @@ export default async function BoxerPage({ params }) {
         ← Back to Boxers
       </Link>
       
-      <h2 className="text-3xl text-red-600 font-bold mb-4">{post.name}</h2>
-      
+     <h2 className="text-3xl text-red-600 font-bold mb-4">{post.name}</h2>
+     <div className="flex flex-col md:flex-row gap-6 mb-8">
       {post.image_url && (
-        <img src={post.image_url} 
-        alt={post.name} 
-        className="max-w-md border-3 border-red-600 rounded-lg mb-6" />
+        <div className="flex-shrink-0">
+          <img 
+            src={post.image_url} 
+            alt={post.name} 
+            className="max-w-d border-4 border-red-600 rounded-lg"
+          />
+        </div>
       )}
+      <div className="flex-1">
+        <h3 className="text-2xl text-red-600 font-bold mb-3">About</h3>
+        <div className="text-gray-700 space-y-2">
+          {post.bio ? (
+            <p className="whitespace-pre-wrap">{post.bio}</p>
+          ) : (
+            <p>No biography available.</p>
+          )}
+        </div>
+      </div>
+     
+     </div>
       
       <h3 className="text-xl text-red-600 font-bold mb-4">Add a Comment</h3>
       
