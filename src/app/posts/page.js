@@ -20,8 +20,8 @@ export default async function PostsPage() {
   return (
     <div className="max-w-6xl mx-auto p-8">
   
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-bold text-red-600">My Favourite Boxers - Make it your own!</h1>
+      <div lassName="flex justify-between items-center mb-8">
+        <h1 className="text- font-bold text-red-600">My Favourite Boxers - Make it your own!</h1>
         <Link 
           href="/posts/new" 
           className="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition"
