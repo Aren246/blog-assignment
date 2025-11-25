@@ -2,10 +2,13 @@ import { db } from '../../../utils/dbConnection';
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 async function getPost(id) {
   const result = await db.query('SELECT * FROM posts WHERE id = $1', [id]);
   return result.rows[0];
+  
+
 }
 
 async function getComments(postId) {
@@ -40,6 +43,10 @@ async function deleteComment(formData) {
 export default async function BoxerPage({ params }) {
   const post = await getPost(params.id);
   const comments = await getComments(params.id);
+
+  if(!post) {
+    notFound();
+  }
   
   return (
     <div className="max-w-6xl mx-auto p-8">

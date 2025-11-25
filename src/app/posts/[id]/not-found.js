@@ -8,15 +8,7 @@ export default function NotFound() {
       <p style={{ marginBottom: '30px', color: '#666' }}>
         This boxer doesnt exist in our database. They must have retired!
       </p>
-      <Link href="/posts" style={{ 
-        padding: '10px 20px', 
-        background: '#007bff', 
-        color: 'white', 
-        textDecoration: 'none',
-        borderRadius: '5px'
-      }}>
-        Back to All Boxers
-      </Link>
+      <Link href="/posts">Back to All Boxers</Link>
     </div>
   );
 }
